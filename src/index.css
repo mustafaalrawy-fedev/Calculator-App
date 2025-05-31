@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Colors */
+  /*
+  Theme 1 
+*/
+
+  /* Backgrounds */
+  --color-bg-main-theme-one: hsl(222, 26%, 31%);
+  --color-bg-keypad-theme-one: hsl(223, 31%, 20%);
+  --color-bg-screen-theme-one: hsl(224, 36%, 15%);
+
+  /* Keys */
+  --color-key-bg-theme-one: hsl(225, 21%, 49%);
+  --color-key-shadow-theme-one: hsl(224, 28%, 35%);
+
+  --color-key-toggle-bg-theme-one: hsl(6, 63%, 50%);
+  --color-key-toggle-shadow-theme-one: hsl(6, 70%, 34%);
+
+  --color-key-alt-bg-theme-one: hsl(30, 25%, 89%);
+  --color-key-alt-shadow-theme-one: hsl(28, 16%, 65%);
+
+  /* Text */
+  --color-primary-color-theme-one: hsl(0, 0%, 100%);
+  --color-secondary-color-theme-one: hsl(221, 14%, 31%);
+
+  /* 
+  Theme 2 
+*/
+
+  /* Backgrounds */
+  --color-bg-main-theme-two: hsl(0, 0%, 90%);
+  --color-bg-keypad-theme-two: hsl(0, 5%, 81%);
+  --color-bg-screen-theme-two: hsl(0, 0%, 93%);
+
+  /* Keys */
+  --color-key-bg-theme-two: hsl(185, 42%, 37%);
+  --color-key-shadow-theme-two: hsl(185, 58%, 25%);
+
+  --color-key-toggle-bg-theme-two: hsl(25, 98%, 40%);
+  --color-key-toggle-shadow-theme-two: hsl(25, 99%, 27%);
+
+  --color-key-alt-bg-theme-two: hsl(45, 7%, 89%);
+  --color-key-alt-shadow-theme-two: hsl(35, 11%, 61%);
+
+  /* Text */
+  --color-primary-color-theme-two: hsl(0, 0%, 100%);
+  --color-secondary-color-theme-two: hsl(60, 10%, 19%);
+
+  /* 
+ Theme 3 
+*/
+
+  /* Backgrounds */
+  --color-bg-main-theme-three: hsl(268, 75%, 9%);
+  --color-bg-keypad-theme-three: hsl(268, 71%, 12%);
+
+  /* Keys */
+  --color-key-bg-theme-three: hsl(281, 89%, 26%);
+  --color-key-shadow-theme-three: hsl(285, 91%, 52%);
+
+  --color-key-toggle-bg-theme-three: hsl(176, 100%, 44%);
+  --color-key-toggle-shadow-theme-three: hsl(177, 92%, 70%);
+
+  --color-key-alt-bg-theme-three: hsl(268, 47%, 21%);
+  --color-key-alt-shadow-theme-three: hsl(290, 70%, 36%);
+
+  /* Text */
+  --color-primary-color-theme-three: hsl(0, 0%, 100%);
+  --color-secondary-color-theme-three: hsl(52, 100%, 62%);
+  --color-tertiary-color-theme-three: hsl(198, 20%, 13%);
+
+  /* Typography */
+  /* Fonts */
+  --font-size-main: 32px;
+  --default-font-family: 'League Spartan', sans-serif;
+  --font-family: 'League Spartan', sans-serif;
+  /* font-family: "League Spartan", sans-serif; */
+}
+
+html[data-theme='mode1'] {
+  @apply bg-bg-main-theme-one;
+}
+html[data-theme='mode2'] {
+  @apply bg-bg-main-theme-two;
+}
+html[data-theme='mode3'] {
+  @apply bg-bg-main-theme-three;
+}
+html,
+body {
+  scroll-behavior: smooth;
+}
+button {
+  @apply cursor-pointer;
+}
+/* Hide number input arrows (Chrome, Safari, Edge) */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@layer components {
+  .container {
+    @apply min-w-full px-5 sm:px-30 md:px-40 lg:px-60 xl:px-96;
+  }
+  .main-transition {
+    @apply transition-all duration-500 ease-in-out;
+  }
+  .main-shadow {
+    @apply shadow-[0px_4px_0px_0px];
+  }
+}
